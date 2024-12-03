@@ -1,9 +1,16 @@
 package com.vrs.binding;
 
-public class product {
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
+public class product {
+    
+	@NotNull(message = "Id is mandatory")
 	private Integer pid;
+	@NotNull(message = "Product name is mandatory")
+	@Size(min = 3,max = 10)
 	private String pname;
+	@NotNull(message = "Product price is Mandatory")
 	private Double price;
 	
 	public Integer getPid() {

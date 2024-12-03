@@ -12,15 +12,18 @@
 			<tr>
 				<td>Product ID</td>
 				<td><input type="text" th:field=*{pid}/></td>
+				<td th:if="${#fields.hasErrors('pid')}" th:errors="*{pid}">Id is Mandatory</td>
 			</tr>
 			<tr>
 				<td>Product Name</td>
 				<td><input type="text" th:field=*{pname}/></td>
+				<td th:if="${#fields.hasErrors('pname')}" th:errors="*{pname}">Name is Mandatory</td>
 			</tr>
 
 			<tr>
 				<td>Product Price</td>
 				<td><input type="text" th:field=*{price}/></td>
+			<td th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price is Mandatory</td>
 			</tr>
 
 			<tr>
